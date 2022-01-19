@@ -1,0 +1,101 @@
+
+{% load static %}
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Register</title>
+		<style>
+			.div1{
+				border:2px solid white;
+				width:max-content;
+				margin:auto;
+				margin-top:35px;
+				border-radius:22px;
+				box-shadow:2px 8px 16px 2px rgba(10,0,0,0.2);
+			}
+			.div1:hover{
+				box-shadow:4px 8px 16px 6px rgba(10,0,0,0.2);
+				transition:0.5s;
+			}
+			.div11{
+				text-align:center;	
+			}
+			.div2 img{
+				width:200px;
+				height:190px;
+				margin-left:60px;
+				margin-bottom:20px;
+			}
+			.div3{
+				margin-left:30px;
+				margin-right:30px;
+			}
+			.div3 input{
+				border-radius:20px;
+				border:1px solid black;
+				height:20px;
+			
+			}
+			.div0{
+				margin-left:10%;
+			}
+			.div0 input{
+				width:200px;
+				height:35px;
+				background-color:#1E90FF;
+			}
+			.div0 input:hover{
+				box-shadow:2px 4px 8px 4px rgba(10,0,0,0.2);
+				transition:0.5s;
+			}
+			.div5{
+				text-align:center;
+			}
+			.div5 a{
+				text-decoration:none;
+				
+			}
+			.div5 a:hover{
+				color:#1E90FF;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			<div class="div11">
+				<h2>Register</h2>
+			</div>
+			<div class="div2">
+				<img src="{% static 'user.png' %}"></img>
+			</div>
+			<div class="div3">
+				<form action="register" method="post">
+					{% csrf_token %}
+					<table>
+						<tr>
+							<td>
+								<input type="text" name="Firstname" size="13" required placeholder=" First Name">
+							</td>
+							<td>
+								<input type="text" name="Lastname" size="13" required placeholder=" Last Name">
+							</td>
+						</tr>
+					</table>
+					<br>
+					E-mail<br><input type="email" size="32.75" name="E-mail" required placeholder=" Enter your email address " ><br><br>
+					Number<br><input type="number" size="32.75" name="number" required placeholder=" Contact number " ><br><br>
+					Password<br><input type="password" size="32.75" name="fpassword" required placeholder=" Password " ><br><br>
+					Confirm Password<br><input type="password" name="spassword" size="32.75" required placeholder=" Confirm Password" ><br><br>
+					<div class="div0">
+						<input type="submit" value="Register">
+					</div>
+				</form>
+				<div class="div5">
+					<h4>Already have an account?<a href="#"> login</a></h4>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+

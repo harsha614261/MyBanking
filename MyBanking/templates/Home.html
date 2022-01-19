@@ -1,0 +1,317 @@
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html">
+	<head>
+		<title>My Home</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<style>
+			.div1{
+				
+				background-image:url({% static '1336125.jpg'%} );
+				background-size:cover;
+				height:103.4%;
+				width:101.6%;
+				margin-top:-12%;
+				margin-left:-1%;
+				margin-right:-1%;
+				border-radius:20px;
+			}
+			.div11{
+				background-color:#08080808;
+				margin-left:-10px;
+				margin-top:160px;
+				margin-bottom:20px;
+				height:40px;
+				position:-webkit-sticky;;
+				
+			}
+			.list1 li{
+				list-style-type:none;
+				float:left;
+				padding-top:10px;
+				text-align:center;
+			}
+			.list1 li a{
+				margin-top:80px;
+				padding:15px;
+				
+				margin:2px;
+				margin-left:30px;
+				overflow:hidden;
+				text-decoration:none;
+			}
+			
+			.div2 {
+				background-color:DodgerBlue;
+				margin-top:-20px;
+				margin-left:-7px;
+				margin-right:-7px;
+				height:103.4%;
+				border-radius:20px;
+			}	
+			.div2 h2{
+				padding-top:20px;
+				text-align:center;
+				text-decoration:underline;
+			}	
+			.div2 h3{
+				text-decoration:underline;
+				margin-left:10px;
+			
+			}
+			.div3{
+				background-color:teal;
+				margin-top:-20px;
+				margin-left:-7px;
+				margin-right:-7px;
+				border-radius:20px;
+			}
+			.div3 h2{
+				padding-top:20px;
+				text-align:center;
+				text-decoration:underline;
+			}
+			
+			.div2 p{
+				margin-left:50px;
+			}
+			.div4{
+				background-color:LightSkyBlue;
+				margin-top:-20px;
+				margin-left:-7px;
+				margin-right:-7px;	
+				padding-bottom:10px;
+				border-radius:20px;
+			}
+			.div4 h2{
+				padding-top:20px;
+				text-align:center;
+				text-decoration:underline;
+			}
+			.div4 input{
+				margin-left:44%;
+			}
+			#sub{
+				margin-left:650px;
+			}
+			.div4 a{
+				margin-left:600px;
+			}
+			.div4 h3{
+				margin-left:670px;
+			}
+			.div6{
+				background-color:gray;
+				margin-top:-4px;
+				margin-left:-7px;
+				margin-right:-7px;
+				border-radius:20px;
+				height:50%;
+			}
+			.div6 ul{
+				float:left;
+				margin-left:100px;
+				
+			}
+			.div6 ul li{
+				list-style-type:none;
+				
+			}
+			.div6 h3{
+				text-decoration:underline;
+			}
+			.list1 a:hover{
+				cursor:pointer;
+				text-decoration:underline;
+				
+			}
+			.list1 a{
+				color:black;
+			}
+			.div6 ul li a{
+				text-decoration:none;
+				color:black;
+			}
+			.div6 ul li a:hover{
+				cursor:pointer;
+				text-decoration:underline;
+			}
+			/* bigshot one font */
+			@import url(https://fonts.googleapis.com/css?family=Cabin+Condensed);
+
+			
+			.body1{
+			  background: #f1f1f1;
+			  background-size:cover;
+			  font-family: 'Cabin Condensed', sans-serif;
+			  display:flex;
+			  flex-direction:column;
+			  justify-content:center;
+			  align-items:center;
+			}
+			svg{
+			font-weight:bold;max-width:600px;height:100%;
+			}
+			.div2:hover{
+				box-shadow:2px 8px 16px 8px #d64161;
+			}
+			.div3:hover{
+				box-shadow:2px 8px 16px 8px #d64161;
+			}
+			.div4:hover{
+				box-shadow:2px 8px 16px 8px #d64161;
+			}
+			.div6:hover{
+				box-shadow:2px 8px 16px 8px #d64161;
+			}
+			h4{
+				text-align:center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			<div class="div11">
+				<ul class="list1">
+					<li>             </li>
+					<li>             </li>
+					<li>             </li>
+					<li>             </li>
+					<li>             </li>
+					<li><a href="login">Login</a></li>
+					<li><a href="register">SignUp</a></li>
+					<li><a onclick="scrolldiv1()">Our Services</a></li>
+					<li><a onclick="scrolldiv2()">About Us</a></li>
+					<li><a  onclick="scrolldiv3()">Contact Us</a></li>
+					<li>                  </li>
+				</ul>
+			</div>
+			<div class="body">
+			<svg viewbox="0 0 100 80">
+			  <defs>
+				<linearGradient id="gradient">
+				  <stop color="#000"/>
+				</linearGradient>
+				<pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+				  <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+					<animateTransform
+						attributeName="transform"
+						begin="0s"
+						dur="1.5s"
+						type="translate"
+						from="0,0"
+						to="40,0"
+						repeatCount="indefinite" />
+				  </path>
+				</pattern>
+			  </defs>
+			  <text text-anchor="middle" x="50" y="18" font-size="17" fill="white" fill-opacity="0.1">MyBanking.com</text>
+			  <text text-anchor="middle" x="50" y="16" font-size="17" fill="url(#wave)"  fill-opacity="1">Banking.com</text>
+			</svg>
+			</div>
+		</div>
+		<div class="div2" id="div2">
+			<h2>Our Services</h2>
+			<h1> </h1>
+			
+			<div class="div21">
+				<h3>Money Deposit</h3>
+					<ul>
+					<li><p>Online banking, also known as internet banking, web banking or home banking, is an electronic payment system that enables customers of a bank or other financial institution to conduct a range of financial transactions through the financial institution's website.</p></li>
+					<li><p>The online banking system will typically connect to or be part of the core banking system operated by a bank to provide customers access to banking services in place of traditional branch banking.</p></li>
+					<li><p>Online banking significantly reduces the banks' operating cost by reducing reliance on a branch network, and offers greater convenience to customers in time saving in coming to a branch and the convenience of being able to perform banking transactions even when branches are closed.</p></li>
+					<li><p>Internet banking provides personal and corporate banking services offering features such as viewing account balances, obtaining statements, checking recent transactions, transferring money between accounts, and making payments.</p></li>
+					<li><p>The online banking system will typically connect to or be part of the core banking system operated by a bank to provide customers access to banking services in place of traditional branch banking.</p></li>
+					<li><p>Online banking significantly reduces the banks' operating cost by reducing reliance on a branch network, and offers greater convenience to customers in time saving in coming to a branch and the convenience of being able to perform banking transactions even when branches are closed.</p></li>
+					<li><p>Internet banking provides personal and corporate banking services offering features such as viewing account balances, obtaining statements, checking recent transactions, transferring money between accounts, and making payments.</p></li>
+					</ul>
+				<h3>Money Transfer</h3>
+					<p>Money transfer generally refers to one of the following cashless modes of payment or payment systems</p>
+					<p>Electronic funds transfer, an umbrella term mostly used for bank card-based payments
+								Wire transfer, an international expedited bank-to-bank funds transfer
+								Giro, also known as direct deposit</p>
+					<p>Money transfer generally refers to one of the following cashless modes of payment or payment systems</p>
+					<p>Electronic funds transfer, an umbrella term mostly used for bank card-based payments
+								Wire transfer, an international expedited bank-to-bank funds transfer
+								Giro, also known as direct deposit</p>
+					
+					</br>
+			</div>
+		</div>
+		<div class="div3" id="div3">
+			<h2>About Us</h2>
+			<div class="div31">
+				<ul class="list2">
+					<li>We are the one among various banking service provider,who provides various banking services</li></br>
+					<li>Here we offer services like Amount transfer,NEFT and other transactions as well</li></br>
+					<li>As a leading banking service provider,we offer great security for all type of transactions</li></br>
+					<li>And we do have various achievements for our services to the customers.</li></br>
+					<li>Finally,as a service provider we always look for the customer satisfaction first</li></br>
+				</ul>
+				</br>
+				</br></br>
+			</div>
+		</div>
+		<div class="div4" id="div4">
+			<h2>Contact Us</h2>
+			<div class="div41">
+				<form action="Message" method="post">
+					{% csrf_token %}
+					<input type="text" name="name" placeholder="Enter your name" required/></br></br>
+					<input type="mail" name="email" placeholder="Enter your Email" required/></br></br>
+					<input type="number" name="number" placeholder="Enter your contact number" required/></br></br>
+					<input type="text" name="message" placeholder="Enter your query"/></br></br>
+					<input type="submit" id="sub"/>
+				</form>
+				<h3>or </h3><a href="mailto:"hariharsha614261@gmail.com">Click here to send us a mail</a>
+				<h4>{{mes}}</h4>
+				</br>
+				</br>
+				</br>
+			</div>
+		</div>
+		<div class="div6">
+			<div class="div61">
+				<ul class="list3">
+					<li><h3>Reach Us</h3></li>
+					<li>Road No:5</li>
+					<li>Sky towers,</li>
+					<li>Hyderabad,</li>
+					<li>Telangana,India</li>
+				</ul>
+				<ul class="list4">
+					<li><h3>Our Services</h3></li>
+					<li>Money Deposit</li>
+					<li>Money Transfer</li>
+				</ul>
+				<ul class="list5">
+					<li><h3>T&C</h3></li>
+					<li>Privacy Policy</li>
+					<li>User Policy</li>
+					<li>Rules and Regulations</li>
+				</ul>
+				<ul class="list6">
+					<li><h3>Menu</h3></li>
+					<li><a href="#">Login</a></li>
+					<li><a href="#">SignUp</a></li>
+					<li><a onclick="scrolldiv1()">Our Services</a></li>
+					<li><a onclick="scrolldiv2()">About Us</a></li>
+					<li><a onclick="scrolldiv3()">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+		<script>
+            function scrolldiv1() {
+                var elem = document.getElementById("div2");
+                elem.scrollIntoView(false);
+            }
+			function scrolldiv2() {
+                var elem = document.getElementById("div3");
+                elem.scrollIntoView(true);
+            }
+			function scrolldiv3() {
+                var elem = document.getElementById("div4");
+                elem.scrollIntoView();
+            }
+        </script>
+	</body>
+</html>

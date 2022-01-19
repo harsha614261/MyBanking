@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>Safe</title>
+	<style>
+		.div2{
+			background-color:teal;
+			display:none;
+			width:50%;
+			margin-left:25%;
+			border-radius:20px;
+		}
+		.div2 form{
+			padding-top:20px;
+			margin-left:30px;
+			margin-left:38%;
+			padding-bottom:20px;
+		}
+		.div2 h2{
+			padding-top:20px;
+			text-align:center;
+		}
+		button{
+			margin-bottom:30px;
+			margin-left:40px;
+		}
+		.div2:hover{
+			box-shadow:2px 8px 16px 8px rgba(0,0,0,0.2);
+		}
+		.div1{
+			background-color:black;
+			height:50px;
+		}
+		.div1 li{
+			list-style-type:none;
+			float:left;
+			padding-top:20px;
+			margin-left:50px;
+		}
+		.div1 li a{
+			text-decoration:none;
+			color:red;
+		}
+		.div3{
+			background-color:teal;
+			display:none;
+			width:50%;
+			margin-left:25%;
+			border-radius:20px;
+		}
+		.div3 form{
+			padding-top:20px;
+			margin-left:30px;
+			margin-left:38%;
+			padding-bottom:20px;
+		}
+		.div3 h2{
+			text-align:center;
+			padding-top:20px;
+		}
+		.div4{
+			background-color:teal;
+			display:none;
+			width:50%;
+			margin-left:25%;
+			border-radius:20px;
+		}
+		.div5{
+			background-color:teal;
+			margin-left:25%;
+			width:50%;
+			border-radius:20px;
+		}
+		.div5 h2{
+			padding-top:20px;
+			text-align:center;
+		}
+		.div5 h3{
+			text-align:center;
+			padding-bottom:20px;
+		}
+		#user a{
+			text-color:red;
+		}
+		#user1 a{
+			text-color:red;
+		}
+	</style>
+</head>
+<body>
+	<div class='div1'>
+		<ul class="list1">
+			<li><a onclick="a(0);b(0);d(1);">Home</a></li>
+			<li><a href="balance">Balance</a></li>
+			<li><a onclick="a(1);b(0);d(0);">Add Funds</a></li>
+			<li><a onclick="a(0);b(1);d(0);">Transfer Funds</a></li>
+			<li><a href="statements">Statement</a></li>
+			<li><a href="logout">Logout</a></li>
+			<li id="user"><a>My Account:<b> {{name}}</b></a></li>
+			<li id="user1"><a>A/C:<b> {{acc}}</b></a></li>
+		</ul>
+	</div>
+	<div class="div2" id="div2">
+		<h2>Add Funds</h2>
+		<form action="addfunds" method='post'>
+			{% csrf_token %}
+			<input type='text' name='account_no' placeholder="Enter your account number" required/></br></br>
+			<input type='number' name='amount' placeholder='Enter the amount to add' required/></br></br>
+			<button id='Add'>Add Money</button>
+		</form>
+	</div>
+	<div class="div3" id="div3">
+		<h2>Transfer Funds</h2>
+		<form action="transfer" method='post'>
+			{% csrf_token %}
+			<input type="text" name="sname" placeholder="Enter receiver name"></br></br>
+			<input type='text' name='account_no' placeholder="Enter sender account number" required/></br></br>
+			<input type='number' name='amount' placeholder='Enter the amount to send' required/></br></br>
+			<button id='Send'>Send Money</button>
+		</form>
+	</div>
+	<div class="div4" id="div4">
+		<h2>Statements</h2>
+		<p>{{data}}</p>p>
+
+	</div>
+	<div class="div5" id='div5'>
+		<h2>Welcome to Safe Page</h2>
+		<h3>Click on above menu items to access the services.</h3>
+	</div>
+
+	<script>
+		function a(a){
+			if (a==1){
+				p=document.getElementById('div2');
+				p.style.display='block';
+
+			}
+			else{
+				document.getElementById('div2').style.display='none';
+			}
+		}
+		function b(a){
+			if (a==1){
+				document.getElementById('div3').style.display='block';
+
+			}
+			else{
+				document.getElementById('div3').style.display='none';
+			}
+		}
+
+		function d(a){
+			if (a==1){
+				document.getElementById('div5').style.display='block';
+
+			}
+			else{
+				document.getElementById('div5').style.display='none';
+			}
+		}
+
+	</script>
+</body>
+</html>
