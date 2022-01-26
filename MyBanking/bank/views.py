@@ -74,6 +74,7 @@ def addfunds(request):
                 t.message=t.message+"/"+"Added funds INR "+str(amount)+"/"
                 t.save()
                 return HttpResponse("amount added successfully")
+    return render(request, 'login.html')
 def balance(request):
     if request.user.is_authenticated:
         deal=transaction.objects.all()
@@ -84,6 +85,7 @@ def balance(request):
             if t.Name==name and t.username==uname and t.email==email:
                 print(t.amount)
                 return render(request,'balance.html',{'bal':t.amount})
+    return render(request, 'login.html')
 def statements(request):
     if request.user.is_authenticated:
         deal=transaction.objects.all()
@@ -93,6 +95,7 @@ def statements(request):
         for t in deal:
             if t.Name==name and t.username==uname and t.email==email:
                 return render(request,'statements.html',{'message':t.message})
+    return render(request,'login.html')
 def transfer(request):
     if request.user.is_authenticated:
         cname=request.user.first_name
@@ -114,6 +117,7 @@ def transfer(request):
                         return HttpResponse('Insufficient Funds')
         else:
             return HttpResponse('Invalid receiver details')
+    return render(request, 'login.html')
 def userornot(rname,raccount):
     print(rname,raccount)
     que=transaction.objects.all()
